@@ -14,7 +14,10 @@ module Accounts
       redirect_to root_url
     end
 
-
+    def accept
+      @invitation = Invitation.find(params[:id])
+    end
+    
     private
 
     def invitation_params
